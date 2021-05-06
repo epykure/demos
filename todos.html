@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.1/js/fontawesome.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" type="text/css">
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+.csstitle {padding: 0 ;margin-bottom: 0 ;white-space: pre-wrap ;font-weight: bold ;}
+.cssinput {border: 1px solid #f4f9fc ;text-align: center ;cursor: text ;margin: 0 ;border-radius: 5px ;color: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;}
+.cssinput:hover {color: #546e7a ;border: 1px solid #546e7a ;}
+.cssinput:focus {outline: 0 ;}
+.cssselectstyle {padding-top: 0 ;background: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;display: inline-block !IMPORTANT ;margin: 0 !IMPORTANT ;}
+.cssselectstyle:focus {outline: 0 ;border: none ;box-shadow: none ;}
+.cssselectbutton .btn {padding: 0 ;outline: none ;border-color: none ;box-shadow: none ;background-color: inherit ;border: none ;}
+.cssselectbutton .btn:focus {outline: none ;border-color: none ;box-shadow: none ;}
+.bootstrap-select .dropdown-toggle:focus {outline: 0 !important ;}
+.dropdown-item {padding: 1px 15px 1px 5px ;border-radius: 5px ;margin-top: -2px !IMPORTANT ;z-index: 210 !IMPORTANT ;line-height: 23px !IMPORTANT ;color: inherit !IMPORTANT ;}
+.dropdown-item:hover {color: #f4f9fc !IMPORTANT ;background-color: #455a64 !IMPORTANT ;}
+.dropdown-item:focus {outline: 0 ;}
+.dropdown-item:active {background-color: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.dropdown-menu {font-size: 14px !IMPORTANT ;background-color: #FFFFFF !IMPORTANT ;}
+.cssselecttoggle {background-color: inherit !IMPORTANT ;font-size: 14px !IMPORTANT ;}
+.bs-searchbox input.form-control {outline: 0 ;margin-bottom: 5px ;border-color: #607d8b ;height: 23px ;}
+.bs-searchbox input.form-control:focus {outline: 0 ;box-shadow: 0 0 0 0.2em #f4f9fc ;}
+.selected {background: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.cssbuttonbasic {font-weight: bold ;padding: 2px 20px ;margin: 2px 0 2px 0 ;text-decoration: none ;border-radius: 4px ;white-space: nowrap ;display: inline-block ;line-height: 30px ;-webkit-appearance: none ;-moz-appearance: none ;border: 1px solid #f4f9fc ;color: inherit ;background-color: #FFFFFF ;}
+.cssbuttonbasic:hover {text-decoration: none ;cursor: pointer ;background-color: #f4f9fc !IMPORTANT ;color: #607d8b !IMPORTANT ;border: 1px solid #607d8b !IMPORTANT ;}
+.cssbuttonbasic:focus {outline: 0 ;}
+.cssbuttonbasic:disabled {cursor: none ;background-color: #263238 ;color: #455a64 ;font-style: italic ;}
+.cssicon {cursor: pointer ;color: #263238 ;}
+.cssicon:hover {color: #607d8b ;}
+.csssdivboxmarginvertical {margin: 5px 0 ;}
+.test:hover {color: green !IMPORTANT}
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#eeeeee;color:#000000;padding-bottom:5px;padding-left:5%;padding-right:5%"><div id="div_2539079062768" class="cssdivnoborder"></div><div id="div_2539079063728" style="max-width:650px;min-height:150px;padding:20px 10px;box-shadow:0 0 10px rgba(0, 0, 0, 0.5);border-radius:0px;margin:20px auto;background:white" class="cssdivnoborder"><div id="title_2539079063584" style="width:auto;margin:5px 0 5px 0;font-size:19px;display:block;margin-right:10px;text-transform:uppercase" class="cssdivnoborder csstitle"><a></a>My todo list</div>
+<div id="div_2539079127872" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left" class="cssdivnoborder"><div id="div_2539079135920" style="vertical-align:middle;box-sizing:border-box;text-align:left;display:inline-block" class="cssdivnoborder"><input placeholder="Add your item" type="text" value="" spellcheck="False" id="input_2539079091296" style="font-size:14px;font-family:Calibri;box-sizing:border-box;padding:0px;background-color:#f4f9fc;min-width:140px;margin-bottom:2px;text-align:left;padding-left:5px;vertical-align:None" class="cssinput" /></div><div id="div_2539079136496" style="vertical-align:middle;box-sizing:border-box;text-align:left;display:inline-block;padding-left:5px;padding-right:5px" class="cssdivnoborder"><select id="select_2539079081408" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;vertical-align:None" data-style="cssdivnoborder cssselectstyle cssselectbutton bootstrap-select .dropdown-toggle dropdown-item dropdown-menu cssselecttoggle"><option value="Shopping" id="option_2539079664160" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">Shopping</option><option value="Meeting" id="option_2539079664208" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">Meeting</option></select></div><div id="div_2539079137936" style="vertical-align:middle;box-sizing:border-box;text-align:left;display:inline-block" class="cssdivnoborder"><button data-count="0" id="button_2539079128832" style="font-size:14px;margin:0;padding:0px;line-height:23px;background:#263238;border:1px solid #263238;color:#f4f9fc;margin-top:5px;margin-bottom:5px;padding-left:10px;padding-right:10px;vertical-align:None" class="cssbuttonbasic">Add</button></div></div>
+<span id="span_2539079154224" style="font-size:inherit;font-family:inherit;box-sizing:border-box;text-align:center;line-height:18px;margin:0 0 -3px -3px;display:inline-block;vertical-align:middle" class="cssdivnoborder">Check</span>
+<i aria-hidden="true" id="iconedit_2539079152688_icon" style="font-size:9px;vertical-align:middle;display:inline-block;margin:2px;padding:auto 0;color:inherit;margin-right:5px" class="cssdivnoborder fas fa-check-square cssicon"></i>
+<span id="span_2539079181264" style="font-size:inherit;font-family:inherit;box-sizing:border-box;text-align:center;line-height:18px;margin:0 2px -3px -3px;display:inline-block;vertical-align:middle" class="cssdivnoborder">Copy</span>
+<i aria-hidden="true" id="iconedit_2539079163232_icon" style="font-size:9px;vertical-align:middle;display:inline-block;margin:2px;padding:auto 0;color:inherit;margin-right:5px" class="cssdivnoborder fas fa-copy cssicon"></i>
+<span id="span_2539079211664" style="font-size:inherit;font-family:inherit;box-sizing:border-box;text-align:center;line-height:18px;margin:0 2px -3px -3px;display:inline-block;vertical-align:middle" class="cssdivnoborder">Hide</span>
+<i aria-hidden="true" id="iconedit_2539079162416_icon" style="font-size:9px;vertical-align:middle;display:inline-block;margin:2px;padding:auto 0;color:inherit;margin-right:5px" class="cssdivnoborder fas fa-eye-slash cssicon"></i>
+<i aria-hidden="true" id="iconedit_2539079163280_icon" style="font-size:9px;vertical-align:middle;display:inline-block;margin:2px;padding:auto 0;color:inherit;margin-right:5px" class="cssdivnoborder fas fa-ellipsis-v cssicon"></i>
+<div id="div_2539079161696" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:right" class="cssdivnoborder"><span id="iconedit_2539079152688" style="font-size:9px;font-family:inherit;box-sizing:border-box;width:35px;height:18px;float:none;margin:0;cursor:pointer;display:inline-block;vertical-align:None" class="cssdivnoborder"></span><span id="iconedit_2539079163232" style="font-size:9px;font-family:inherit;box-sizing:border-box;width:35px;height:18px;float:none;margin:0;cursor:pointer;display:inline-block;vertical-align:None" class="cssdivnoborder"></span><span id="iconedit_2539079162416" style="font-size:9px;font-family:inherit;box-sizing:border-box;width:35px;height:18px;float:none;margin:0;cursor:pointer;display:inline-block;vertical-align:None" class="cssdivnoborder"></span><span id="iconedit_2539079163280" style="font-size:9px;font-family:inherit;box-sizing:border-box;width:10px;height:18px;float:none;margin:0;cursor:pointer;display:inline-block;margin-left:10px;vertical-align:None" class="cssdivnoborder"></span></div>
+<ul id="items_2539079090720" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;list-style:none;border:1px solid #e0e0e0;padding:5px;margin-top:0px" class="cssdivnoborder"></ul>
+<div id="div_2539079283328" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:center" class="cssdivnoborder"><button data-count="0" id="button_2539079283424" style="font-size:14px;margin:0;padding:0px;line-height:23px;background:#263238;border:1px solid #263238;color:#f4f9fc;margin-top:5px;margin-bottom:5px;padding-left:10px;padding-right:10px;margin-right:5px;vertical-align:None" class="cssbuttonbasic">Clear</button><button data-count="0" id="button_2539079284240" style="font-size:14px;margin:0;padding:0px;line-height:23px;background:#263238;border:1px solid #263238;color:#f4f9fc;margin-top:5px;margin-bottom:5px;padding-left:10px;padding-right:10px;vertical-align:None" class="cssbuttonbasic">Save</button></div>
+<div id="console_2539079300192" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;height:200px;overflow:auto;color:#000000;background:#eeeeee;border:1px solid #bdbdbd;padding:5px" class="cssdivnoborder"></div>
+
+      <nav id="contextmenu_2539079301920" style="font-size:inherit;font-family:inherit;box-sizing:border-box;display:none;position:absolute;z-index:200;padding:0;margin:0;background-color:#FFFFFF;border:1px solid #e8f2ef;border-radius:10px;box-shadow:0 0 10px rgba(0, 0, 0, 0.5);cursor:pointer" class="cssdivnoborder" name='context_menus'>
+        <ul style='list-style:none;padding:0px;margin:0'><li id="li_2539079328624" style="font-size:inherit;font-family:inherit;box-sizing:border-box;margin:1px 5px;padding:5px;cursor:pointer" class="cssdivnoborder"><div id="div_2539079328048" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left" class="cssdivnoborder">Test 1</div></li><li id="li_2539079331504" style="font-size:inherit;font-family:inherit;box-sizing:border-box;margin:1px 5px;padding:5px;cursor:pointer" class="cssdivnoborder"><div id="div_2539079330064" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left" class="cssdivnoborder">Test 2</div></li></ul>
+      </nav>
+<div id="div_2539079301824" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left" class="cssdivnoborder"><hr id="hr_2539079355024" style="width:100%;border-color:#9e9e9e;background-color:#9e9e9e" class="csssdivboxmarginvertical"></div>
+<div id="title_2539079356368" style="width:auto;margin:5px 0 5px 0;font-size:16px;display:block;margin-right:10px;text-transform:uppercase;font-weight:bold" class="cssdivnoborder csstitle"><a></a>Report powered by</div>
+<div id="div_2539079376560" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;font-size:10px" class="cssdivnoborder"><div id="div_2539079392800" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_2539079390496" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#5E20B4;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Bootstrap</div><div id="text_2539079391360" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v4.5.3</div></div><div id="div_2539079578288" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_2539079567824" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#5878E8;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Bootstrap-select</div><div id="text_2539079568592" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v1.13.18</div></div><div id="div_2539079603824" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_2539079581216" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#759E81;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Font-awesome</div><div id="text_2539079602384" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v5.13.1</div></div><div id="div_2539079620976" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_2539079567920" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#CD3643;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Jquery</div><div id="text_2539079619536" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v3.6.0</div></div></div></div><div id="div_2539079063056" class="cssdivnoborder"></div></body>
+<script>
+function Span(htmlObj, data, options){ 
+      if(options.showdown){var converter = new showdown.Converter(options.showdown); data = converter.makeHtml(data)} 
+      if(options._children > 0){htmlObj.appendChild(document.createTextNode(data))}
+      else{htmlObj.innerHTML = data}};function Icon(htmlObj, data, options){
+      if (typeof data !== 'undefined'){
+      htmlObj.classList = []; data.split(' ').forEach(function(cls){htmlObj.classList.add(cls)});
+      if(typeof options.css !== 'undefined'){for(var k in options.css){htmlObj.style[k] = options.css[k]}}}};function check(htmlObj, data, options){
+    var item = document.createElement("DIV");  
+    item.style.padding = 0; item.style.whiteSpace = "nowrap";  item.style.display = "block";
+    
+    var span = document.createElement("span");  
+    var input = document.createElement("input");    
+    input.setAttribute('type', 'checkbox');
+    input.setAttribute('name', 'input_box');
+    input.style.verticalAlign = "middle";
+    input.onchange = function(event){ 
+      event.stopPropagation(); event.cancelBubble = true; span.setAttribute('data-valid', this.checked); 
+      var value = span.innerHTML; if(options.click != null){options.click(event, value)}};
+    
+    var span = document.createElement("span"); span.style.marginLeft = '5px'; 
+    span.setAttribute('name', 'value'); span.setAttribute('data-valid', false); 
+    
+    if(typeof data === 'object'){ 
+      if(typeof data.text !== 'undefined'){ span.innerHTML = data.text} else {span.innerHTML = data.value}} 
+    else { span.innerHTML = data};
+    if(options.checked){ 
+      input.setAttribute('checked', options.checked); span.setAttribute('data-valid', options.checked)};
+    if(data.checked){input.setAttribute('checked', data.checked); span.setAttribute('data-valid', data.checked)};
+    
+    span.style.verticalAlign = "middle";
+    item.appendChild(input); item.appendChild(span);
+    ; htmlObj.appendChild(item)
+      };function Items(htmlObj, data, options){ htmlObj.innerHTML = "";
+      data.forEach(function(item, i){
+        if(options.showdown){var converter = new showdown.Converter(options.showdown); 
+          converter.setOption("display", "inline-block"); var content = item; 
+          if(typeof item.content !== 'undefined'){content = item.content}
+          else if(typeof item.text !== 'undefined'){content = item.text};
+          var content = converter.makeHtml(content).replace("<p>", "<p style='display:inline-block;margin:0'>")};
+        var li = document.createElement("li");
+        Object.keys(options.li_style).forEach(function(key){li.style[key] = options.li_style[key]});
+        if(typeof item.type === 'undefined'){window[options.prefix+ options.items_type](li, item, options)}
+        else{window[options.prefix + item.type](li, item, options)};
+        if(typeof item.tooltip !== 'undefined'){
+          var info = document.createElement("i");
+          info.classList.add(...options.info_icon.split(" ")); info.style.position = 'absolute';
+          info.style.top = "5px"; info.style.right = "20px";
+          li.style.position = "relative";
+          
+          info.setAttribute('title', item.tooltip); 
+          info.setAttribute('data-html', true); 
+          info.setAttribute('data-placement', 'right'); 
+          info.setAttribute('data-toggle', 'tooltip'); 
+          li.lastChild.style.display = 'inline-block'; li.appendChild(info);
+          $(info).tooltip();
+          
+        }
+        if(options.delete){
+          var close = document.createElement("i");
+          close.classList.add(...options.delete_icon.split(" ")); close.style.position = 'absolute';
+          close.style.right = "0"; close.style.cursor = 'pointer';
+          close.onclick = function(event){this.parentNode.remove()};
+          li.style.position = "relative";
+          for (const [key, value] of Object.entries(options.delete_position)){
+            close.style[key] = value}
+          li.lastChild.style.display = 'inline-block'; li.appendChild(close)}
+        if(options.items_space){li.style.margin = "5px 0"; li.style.padding = "2px 0"}
+        htmlObj.appendChild(li)})};function Console(htmlObj, data, options){ 
+      if(options.showdown){var converter = new showdown.Converter(options.showdown);
+        converter.setOption("display", "inline-block");
+        data = converter.makeHtml(data).replace("<p>", "<p style='display:inline-block;margin:0'>")}
+      htmlObj.innerHTML = data +'<br/>' };document.getElementById('iconedit_2539079152688').insertBefore(document.getElementById('span_2539079154224'), document.getElementById('iconedit_2539079152688').firstChild);document.getElementById('iconedit_2539079152688').insertBefore(document.getElementById('iconedit_2539079152688_icon'), document.getElementById('iconedit_2539079152688').firstChild);document.getElementById('iconedit_2539079163232').insertBefore(document.getElementById('span_2539079181264'), document.getElementById('iconedit_2539079163232').firstChild);document.getElementById('iconedit_2539079163232').insertBefore(document.getElementById('iconedit_2539079163232_icon'), document.getElementById('iconedit_2539079163232').firstChild);document.getElementById('iconedit_2539079162416').insertBefore(document.getElementById('span_2539079211664'), document.getElementById('iconedit_2539079162416').firstChild);document.getElementById('iconedit_2539079162416').insertBefore(document.getElementById('iconedit_2539079162416_icon'), document.getElementById('iconedit_2539079162416').firstChild);document.getElementById('iconedit_2539079163280').insertBefore(document.getElementById('iconedit_2539079163280_icon'), document.getElementById('iconedit_2539079163280').firstChild);$("#select_2539079081408").selectpicker({"auto_select": 0}).selectpicker('refresh');Items(document.getElementById('items_2539079090720'), [], {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: null, draggable: false, prefix: "", checked: false, items_type: "check", items_space: false, delete: true, style_select: "list_check_selected", builder: Items});Console(document.getElementById('console_2539079300192'), "* This is a log section for all the events in the different buttons *", {markdown: false, showdown: false, builder: Console});document.getElementById('input_2539079091296').addEventListener('keydown', function(event){if(event.which == 13){(function(){var clickEvent = new Event("click"); document.getElementById('button_2539079128832').focus(); document.getElementById('button_2539079128832').dispatchEvent(clickEvent)})();document.getElementById('input_2539079091296').select()}});document.getElementById('button_2539079128832').addEventListener('click', function(event){
+      var item = document.getElementById('input_2539079091296').value; var itemOptions = {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: null, draggable: false, prefix: "", checked: false, items_type: "check", items_space: false, delete: true};
+      if(itemOptions.showdown){
+          var converter = new showdown.Converter({}); converter.setOption("display", "inline-block");
+          var content = item; if(typeof item.content !== 'undefined'){content = item.content};
+          content = converter.makeHtml(content).replace("<p>", "<p style='display:inline-block;margin:0'>");
+          item.content = content
+      };
+      var li = document.createElement("LI"); check(li, item, {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: null, draggable: false, prefix: "", checked: false, items_type: "check", items_space: false, delete: true}); 
+      if(itemOptions.items_space){li.style.margin = "5px 0"; li.style.padding = "2px 0"};
+      document.getElementById('items_2539079090720').appendChild(li)
+      if(itemOptions.delete){
+        var close = document.createElement("i");
+        close.setAttribute("class", itemOptions.delete_icon);
+        close.style.cursor = 'pointer'; close.style.position = 'absolute'; close.style.right = "0";
+        li.style.position = "relative";
+        close.onclick = function(event){this.parentNode.remove()};
+        for (const [key, value] of Object.entries(itemOptions.delete_position)){close.style[key] = value}
+        li.lastChild.style.display = 'inline-block'; li.appendChild(close);
+        const cls = null;
+        if (cls != null){li.classList.add(cls)}
+      } ;
+      document.getElementById('items_2539079090720').lastChild.addEventListener("contextmenu", function(event){
+        window.context_menu_source = this; event.stopPropagation();document.getElementById('contextmenu_2539079301920').style.display = "block";document.getElementById('contextmenu_2539079301920').style.left = event.clientX + 'px';document.getElementById('contextmenu_2539079301920').style.top = event.clientY + 'px';event.preventDefault()});
+      ;
+      var enumTags = $("#select_2539079081408").val();
+      if(enumTags != ''){
+        if(typeof enumTags === 'string'){ enumTags = [enumTags]};
+        enumTags.forEach(function(val){
+          var item = document.createElement("DIV"); item.innerHTML = val;
+          item.style.display = "inline-block"; item.style.padding = "1px 2px"; item.style.margin = "0 1px";
+          item.style.color = "black"; item.style.fontSize = "8px"; item.style.background = "white";
+          item.style.border = "1px solid white"; item.style.borderRadius = "5px"; const css = null;
+          if (css != null){
+            for (const [key, value] of Object.entries(css)) {
+              item.style[key] = value
+            }
+          }
+          const cls = "test";
+          if(cls != null){item.classList.add(cls)}
+          document.getElementById('items_2539079090720').lastChild.appendChild(item)
+      })}});document.getElementById('iconedit_2539079152688').addEventListener('click', function(event){document.getElementById('iconedit_2539079152688').style.background = "#e8f2ef";document.getElementById('iconedit_2539079152688').style.borderRadius = "10px";var JsObject_1 = window.setTimeout(function(){document.getElementById('iconedit_2539079152688').style.background = "none"}, 2000);if(document.getElementById('span_2539079154224').innerText == "Check"){Span(document.getElementById('span_2539079154224'), "None", {builder: Span});
+        document.getElementById('items_2539079090720').childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            item.checked = true;
+            dom.querySelector('[name=value]').setAttribute("data-valid", true);
+        }});Icon(document.getElementById('iconedit_2539079152688_icon'), "far fa-square", {builder: Icon})}else {Span(document.getElementById('span_2539079154224'), "Check", {builder: Span});
+        document.getElementById('items_2539079090720').childNodes.forEach(function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            dom.querySelector('[name=input_box]').checked = false;
+            dom.querySelector('[name=value]').setAttribute("data-valid", false);
+        }});Icon(document.getElementById('iconedit_2539079152688_icon'), "fas fa-check-square", {builder: Icon})}});document.getElementById('iconedit_2539079163232').addEventListener('click', function(event){
+        var elInput = document.createElement('input'); elInput.setAttribute('type', 'text');
+        elInput.setAttribute('value', document.getElementById('items_2539079090720').innerText); document.body.appendChild(elInput);
+        document.execCommand('copy', false, elInput.select()); elInput.remove()
+        ;document.getElementById('iconedit_2539079163232').style.background = "#e8f2ef";document.getElementById('iconedit_2539079163232').style.borderRadius = "10px";var JsObject_2 = window.setTimeout(function(){document.getElementById('iconedit_2539079163232').style.background = "none"}, 2000)});document.getElementById('iconedit_2539079162416').addEventListener('click', function(event){if(document.getElementById('items_2539079090720').style.display == "none"){document.getElementById('items_2539079090720').style.display = "inline-block"}else {document.getElementById('items_2539079090720').style.display = "none"};if(document.getElementById('span_2539079211664').innerText == "Hide"){Span(document.getElementById('span_2539079211664'), "View", {builder: Span});Icon(document.getElementById('iconedit_2539079162416_icon'), "fas fa-eye", {builder: Icon})}else {Span(document.getElementById('span_2539079211664'), "Hide", {builder: Span});Icon(document.getElementById('iconedit_2539079162416_icon'), "fas fa-eye-slash", {builder: Icon})};document.getElementById('iconedit_2539079162416').style.background = "#e8f2ef";document.getElementById('iconedit_2539079162416').style.borderRadius = "10px";var JsObject_3 = window.setTimeout(function(){document.getElementById('iconedit_2539079162416').style.background = "none"}, 2000)});document.getElementById('iconedit_2539079163280').addEventListener('click', function(event){document.getElementById('div_2539079161696').style.display = "none"});document.getElementById('button_2539079283424').addEventListener('click', function(event){while(document.getElementById('items_2539079090720').firstChild){document.getElementById('items_2539079090720').removeChild(document.getElementById('items_2539079090720').firstChild)}});document.getElementById('button_2539079284240').addEventListener('click', function(event){document.getElementById('console_2539079300192').innerHTML += ' > '+ new Date().toISOString().replace('T', ' ').slice(0, 19) +', '+ 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_2539079090720')) +'<br/>'});document.getElementById('contextmenu_2539079301920').addEventListener('mouseleave', function(event){document.getElementById('contextmenu_2539079301920').style.display = "none"});document.getElementById('div_2539079328048').addEventListener('click', function(event){
+        var data = {"action": event.srcElement.innerText};
+        if(window.context_menu_source.getAttribute("name")){
+          data["source"] = window.context_menu_source.innerHTML} 
+        else {data["source"] = window.context_menu_source.querySelector('[name=value]').innerHTML} 
+        ;document.getElementById('console_2539079300192').innerHTML += ' > '+ new Date().toISOString().replace('T', ' ').slice(0, 19) +', '+ JSON.stringify(data) +'<br/>';document.getElementById('contextmenu_2539079301920').style.display = "none"});document.getElementById('div_2539079330064').addEventListener('click', function(event){
+        var data = {"action": event.srcElement.innerText};
+        if(window.context_menu_source.getAttribute("name")){
+          data["source"] = window.context_menu_source.innerHTML} 
+        else {data["source"] = window.context_menu_source.querySelector('[name=value]').innerHTML} 
+        ;document.getElementById('console_2539079300192').innerHTML += ' > '+ new Date().toISOString().replace('T', ' ').slice(0, 19) +', '+ JSON.stringify(data) +'<br/>';document.getElementById('contextmenu_2539079301920').style.display = "none"});document.getElementById('text_2539079390496').addEventListener('click', function(event){window.open("https://getbootstrap.com/", "_blank")});document.getElementById('text_2539079567824').addEventListener('click', function(event){window.open("http://silviomoreto.github.io/bootstrap-select/", "_blank")});document.getElementById('text_2539079581216').addEventListener('click', function(event){window.open("https://fontawesome.com/", "_blank")});document.getElementById('text_2539079567920').addEventListener('click', function(event){window.open("http://jquery.com/", "_blank")})
+</script>
+</html>
