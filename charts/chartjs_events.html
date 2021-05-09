@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" type="text/css">
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+.cssselectstyle {padding-top: 0 ;background: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;display: inline-block !IMPORTANT ;margin: 0 !IMPORTANT ;}
+.cssselectstyle:focus {outline: 0 ;border: none ;box-shadow: none ;}
+.cssselectbutton .btn {padding: 0 ;outline: none ;border-color: none ;box-shadow: none ;background-color: inherit ;border: none ;}
+.cssselectbutton .btn:focus {outline: none ;border-color: none ;box-shadow: none ;}
+.bootstrap-select .dropdown-toggle:focus {outline: 0 !important ;}
+.dropdown-item {padding: 1px 15px 1px 5px ;border-radius: 5px ;margin-top: -2px !IMPORTANT ;z-index: 210 !IMPORTANT ;line-height: 23px !IMPORTANT ;color: inherit !IMPORTANT ;}
+.dropdown-item:hover {color: #f4f9fc !IMPORTANT ;background-color: #455a64 !IMPORTANT ;}
+.dropdown-item:focus {outline: 0 ;}
+.dropdown-item:active {background-color: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.dropdown-menu {font-size: 14px !IMPORTANT ;background-color: #FFFFFF !IMPORTANT ;}
+.cssselecttoggle {background-color: inherit !IMPORTANT ;font-size: 14px !IMPORTANT ;}
+.bs-searchbox input.form-control {outline: 0 ;margin-bottom: 5px ;border-color: #607d8b ;height: 23px ;}
+.bs-searchbox input.form-control:focus {outline: 0 ;box-shadow: 0 0 0 0.2em #f4f9fc ;}
+.selected {background: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.cssdrawer div[name="drawer"] {position: absolute ;top: 0 ;height: 100% ;overflow-x: hidden ;}
+.cssdrawerhandle div[name="drawer_handle"] {width: 10px ;height: 100% ;display: inline-block ;background-color: #263238 ;}
+.cssdrawerhandle div[name="drawer_handle"]::after {position: absolute ;top: 50% ;padding: 2px ;height: 100% ;}
+.cssdrawercontent div[name="drawer_content"] {height: 100% ;display: inline-block ;background-color: #f4f9fc ;}
+.cssbuttonbasic {font-weight: bold ;padding: 2px 20px ;margin: 2px 0 2px 0 ;text-decoration: none ;border-radius: 4px ;white-space: nowrap ;display: inline-block ;line-height: 30px ;-webkit-appearance: none ;-moz-appearance: none ;border: 1px solid #f4f9fc ;color: inherit ;background-color: #FFFFFF ;}
+.cssbuttonbasic:hover {text-decoration: none ;cursor: pointer ;background-color: #f4f9fc !IMPORTANT ;color: #607d8b !IMPORTANT ;border: 1px solid #607d8b !IMPORTANT ;}
+.cssbuttonbasic:focus {outline: 0 ;}
+.cssbuttonbasic:disabled {cursor: none ;background-color: #263238 ;color: #455a64 ;font-style: italic ;}
+
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#eeeeee;color:#000000;padding-bottom:5px;padding-left:5%;padding-right:5%"><div id="div_1843311372704" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;background:white;padding-left:10px;padding-right:10px;max-width:650px;min-height:150px;padding:20px 10px;box-shadow:0 0 10px rgba(0, 0, 0, 0.5);border-radius:0px;margin:20px auto" class="cssdivnoborder"><select id="select_1843311118896" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%" data-style="cssdivnoborder cssselectstyle cssselectbutton bootstrap-select .dropdown-toggle dropdown-item dropdown-menu cssselecttoggle"><option value="" id="option_1843311434192" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">name</option><option value="type" id="option_1843311434240" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">code</option></select>
+      <div id="drawer_1843311240960" style="vertical-align:middle;box-sizing:border-box;width:100%;height:100%;position:relative;min-height:200px" class="cssdivnoborder cssdrawer cssdrawerhandle cssdrawercontent cssdrawer">
+        <div name="drawer_panels" id="div_1843311278688" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;padding-right:10px" class="cssdivnoborder"><div id="div_1843311371264" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;display:block" class="cssdivnoborder"><canvas id="chartbar_1843311195856" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;height:330px;margin-top:10px;vertical-align:None" class="cssdivnoborder"></canvas></div></div>
+        <div name='drawer' style='clear:both;right:0;overflow-y:hidden'>
+          
+          <div name="drawer_handle" id="div_1843311304864" style="cursor:pointer;float:left" class="cssdivnoborder"></div><div name="drawer_content" id="div_1843311306016" style="overflow-y:auto;width:200px;margin-right:-200px" class="cssdivnoborder"><div id="div_1843311306736" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;padding:0 5px" class="cssdivnoborder"><div id="htmlgeneric_1843311324176" style="font-size:20px;font-family:inherit;box-sizing:border-box;height:auto;text-align:left;margin-top:5px;color:#263238;font-style:italic;vertical-align:None" class="cssdivnoborder">Columns</div><button data-count="0" id="button_1843311306448" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px;vertical-align:None" class="cssbuttonbasic">Select</button><button data-count="0" id="button_1843311306496" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px;vertical-align:None" class="cssbuttonbasic">UnSelect</button><ul id="items_1843311198016" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;list-style:none;vertical-align:None" class="cssdivnoborder"></ul></div></div>
+        </div>
+      </div></div></body>
+<script>
+function filterContain(r, k, v){if (v.length == 0){if(false){return r} else {return []}}; var n=[];r.forEach(function(e){if(v.includes(e[k])){n.push(e)}});return n};
+      function AggSumBy(rs, cs, sks, dk){var result = []; var tmpResults = {}; if(sks == ''){return rs}; var rdk = dk === null ? sks :  dk;
+        if (!Array.isArray(sks)) {sks = [sks]}
+        rs.forEach(function(r){
+          var sk = []; sks.forEach(function(s){sk.push(r[s])}); var skKey = sk.join('#');
+          if (!(skKey in tmpResults)){tmpResults[skKey] = {}; sks.forEach(function(s){tmpResults[skKey][s] = r[s]})
+             cs.forEach(function(c){tmpResults[skKey][c] = 0})}
+          cs.forEach(function(c){tmpResults[skKey][c] += r[c]})
+        }); for(var v in tmpResults){result.push(tmpResults[v])}; return result};function ChartJsbar(data, options){
+      if(data.python){
+        result = {datasets: [], labels: data.labels};
+        data.datasets.forEach(function(dataset, i){
+          if(typeof dataset.backgroundColor === "undefined"){dataset.backgroundColor = options.background_colors[i]};
+          if(typeof dataset.borderColor === "undefined"){dataset.borderColor = options.colors[i]};
+          if(typeof dataset.hoverBackgroundColor === "undefined"){
+            dataset.hoverBackgroundColor = options.background_colors[i]};
+          if(typeof options.commons !== "undefined"){Object.assign(dataset, options.commons)}
+          result.datasets.push(dataset) })
+      } else{
+        var temp = {}; var labels = []; var uniqLabels = {}; 
+        options.y_columns.forEach(function(series){temp[series] = {}});
+        data.forEach(function(rec){ 
+          options.y_columns.forEach(function(name){ 
+          if(rec[name] !== undefined){
+            if (!(rec[options.x_axis] in uniqLabels)){
+              labels.push(rec[options.x_axis]); uniqLabels[rec[options.x_axis]] = true}; 
+            temp[name][rec[options.x_axis]] = rec[name]}})
+        }); 
+        result = {datasets: [], labels: labels};
+        options.y_columns.forEach(function(series, i){
+            dataSet = {label: series, data: [], backgroundColor: options.background_colors[i], type: options.type, 
+                 hoverBackgroundColor: options.colors[i], borderColor: options.colors[i], 
+                 borderColor: options.colors[i], borderWidth: 1, hoverBorderColor: options.colors[i]};
+            if ((typeof options.props !== 'undefined') && (typeof options.props[series] !== 'undefined')){
+              for(var attr in options.props[series]){dataSet[attr] = options.props[series][attr]}}
+            else if(typeof options.commons !== 'undefined'){
+              for(var attr in options.commons){dataSet[attr] = options.commons[attr]}}
+              labels.forEach(function(x){
+                if (temp[series][x] == undefined){dataSet.data.push(null)} else {dataSet.data.push(temp[series][x])}}); 
+          result.datasets.push(dataSet)})
+      }; return result};function check(htmlObj, data, options){
+    var item = document.createElement("DIV");  
+    item.style.padding = 0; item.style.whiteSpace = "nowrap";  item.style.display = "block";
+    
+    var span = document.createElement("span");  
+    var input = document.createElement("input");    
+    input.setAttribute('type', 'checkbox');
+    input.setAttribute('name', 'input_box');
+    input.style.verticalAlign = "middle";
+    input.onchange = function(event){ 
+      event.stopPropagation(); event.cancelBubble = true; span.setAttribute('data-valid', this.checked); 
+      var value = span.innerHTML; if(options.click != null){options.click(event, value)}};
+    
+    var span = document.createElement("span"); span.style.marginLeft = '5px'; 
+    span.setAttribute('name', 'value'); span.setAttribute('data-valid', false); 
+    
+    if(typeof data === 'object'){ 
+      if(typeof data.text !== 'undefined'){ span.innerHTML = data.text} else {span.innerHTML = data.value}} 
+    else { span.innerHTML = data};
+    if(options.checked){ 
+      input.setAttribute('checked', options.checked); span.setAttribute('data-valid', options.checked)};
+    if(data.checked){input.setAttribute('checked', data.checked); span.setAttribute('data-valid', data.checked)};
+    
+    span.style.verticalAlign = "middle";
+    item.appendChild(input); item.appendChild(span);
+    ; htmlObj.appendChild(item)
+      };function Items(htmlObj, data, options){ htmlObj.innerHTML = "";
+      data.forEach(function(item, i){
+        if(options.showdown){var converter = new showdown.Converter(options.showdown); 
+          converter.setOption("display", "inline-block"); var content = item; 
+          if(typeof item.content !== 'undefined'){content = item.content}
+          else if(typeof item.text !== 'undefined'){content = item.text};
+          var content = converter.makeHtml(content).replace("<p>", "<p style='display:inline-block;margin:0'>")};
+        var li = document.createElement("li");
+        Object.keys(options.li_style).forEach(function(key){li.style[key] = options.li_style[key]});
+        if(typeof item.type === 'undefined'){window[options.prefix+ options.items_type](li, item, options)}
+        else{window[options.prefix + item.type](li, item, options)};
+        if(typeof item.tooltip !== 'undefined'){
+          var info = document.createElement("i");
+          info.classList.add(...options.info_icon.split(" ")); info.style.position = 'absolute';
+          info.style.top = "5px"; info.style.right = "20px";
+          li.style.position = "relative";
+          
+          info.setAttribute('title', item.tooltip); 
+          info.setAttribute('data-html', true); 
+          info.setAttribute('data-placement', 'right'); 
+          info.setAttribute('data-toggle', 'tooltip'); 
+          li.lastChild.style.display = 'inline-block'; li.appendChild(info);
+          $(info).tooltip();
+          
+        }
+        if(options.delete){
+          var close = document.createElement("i");
+          close.classList.add(...options.delete_icon.split(" ")); close.style.position = 'absolute';
+          close.style.right = "0"; close.style.cursor = 'pointer';
+          close.onclick = function(event){this.parentNode.remove()};
+          li.style.position = "relative";
+          for (const [key, value] of Object.entries(options.delete_position)){
+            close.style[key] = value}
+          li.lastChild.style.display = 'inline-block'; li.appendChild(close)}
+        if(options.items_space){li.style.margin = "5px 0"; li.style.padding = "2px 0"}
+        htmlObj.appendChild(li)})};var None = [{"name": "C", "type": "code", "rating": 17.07, "change": 12.82}, {"name": "Java", "type": "code", "rating": 16.28, "change": 0.28}, {"name": "Python", "type": "script", "rating": 9.12, "change": 1.29}, {"name": "C++", "type": "code", "rating": 6.13, "change": -1.97}, {"name": "C#", "type": "code", "rating": 4.29, "change": 0.3}, {"name": "Visual Basic", "type": "script", "rating": 4.18, "change": -1.01}, {"name": "JavaScript", "type": "script", "rating": 2.68, "change": -0.01}, {"name": "PHP", "type": "script", "rating": 2.49, "change": 0}, {"name": "SQL", "type": "script", "rating": 2.09, "change": -0.47}, {"name": "R", "type": "script", "rating": 1.85, "change": 0.9}];$("#select_1843311118896").selectpicker({"auto_select": 0}).selectpicker('refresh');Items(document.getElementById('items_1843311198016'), [{"value": "C", "checked": false}, {"value": "Java", "checked": false}, {"value": "Python", "checked": false}, {"value": "C++", "checked": false}, {"value": "C#", "checked": false}, {"value": "Visual Basic", "checked": false}, {"value": "JavaScript", "checked": false}, {"value": "PHP", "checked": false}, {"value": "SQL", "checked": false}, {"value": "R", "checked": false}], {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: function(event, value){console.log(value);Object.assign(window['chartbar_1843311195856_obj'].data, ChartJsbar(AggSumBy(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311198016'))), ["rating", "change"], $("#select_1843311118896").val(), "name"), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", commons: {"opacity": 0.6}, type: "bar", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbar_1843311195856_obj'].update()} , draggable: false, prefix: "", checked: true, items_type: "check", items_space: false, style_select: "list_check_selected", builder: Items});chartbar_1843311195856_obj = new Chart(document.getElementById('chartbar_1843311195856').getContext("2d"), {type: "bar", data: {labels: ["C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "R", "SQL", "Visual Basic"], datasets: [{data: [17.07, 4.29, 6.13, 16.28, 2.68, 2.49, 9.12, 1.85, 2.09, 4.18], type: "bar", label: "rating", backgroundColor: "rgba(0, 153, 153, 0.6)", borderWidth: 1, borderColor: "#009999"}, {data: [12.82, 0.3, -1.97, 0.28, -0.01, null, 1.29, 0.9, -0.47, -1.01], type: "bar", label: "change", backgroundColor: "rgba(51, 102, 153, 0.6)", borderWidth: 1, borderColor: "#336699"}]}, options: {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", commons: {"opacity": 0.6}, type: "bar", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]}});document.getElementById('select_1843311118896').addEventListener('change', function(event){Object.assign(window['chartbar_1843311195856_obj'].data, ChartJsbar(AggSumBy(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311198016'))), ["rating", "change"], $("#select_1843311118896").val(), "name"), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", commons: {"opacity": 0.6}, type: "bar", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbar_1843311195856_obj'].update()});document.getElementById('div_1843311304864').addEventListener('click', function(event){if(document.getElementById('div_1843311306016').style.marginRight != '0px') {document.getElementById('div_1843311306016').style.transitionProperty = "margin-right"; document.getElementById('div_1843311306016').style.transitionDuration = "1s"; document.getElementById('div_1843311306016').style.transitionTimingFunction = "ease"; document.getElementById('div_1843311306016').style.marginRight = "0px"; document.getElementById('div_1843311306016').style.transitionProperty = "initial"} else {document.getElementById('div_1843311306016').style.transitionProperty = "margin-right"; document.getElementById('div_1843311306016').style.transitionDuration = "1s"; document.getElementById('div_1843311306016').style.transitionTimingFunction = "ease"; document.getElementById('div_1843311306016').style.marginRight = "-200px"; document.getElementById('div_1843311306016').style.transitionProperty = "initial"}});document.getElementById('button_1843311306448').addEventListener('click', function(event){
+        document.getElementById('items_1843311198016').childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            item.checked = true;
+            dom.querySelector('[name=value]').setAttribute("data-valid", true);
+        }});Object.assign(window['chartbar_1843311195856_obj'].data, ChartJsbar(AggSumBy(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311198016'))), ["rating", "change"], $("#select_1843311118896").val(), "name"), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", commons: {"opacity": 0.6}, type: "bar", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbar_1843311195856_obj'].update()});document.getElementById('button_1843311306496').addEventListener('click', function(event){
+        document.getElementById('items_1843311198016').childNodes.forEach(function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            dom.querySelector('[name=input_box]').checked = false;
+            dom.querySelector('[name=value]').setAttribute("data-valid", false);
+        }});Object.assign(window['chartbar_1843311195856_obj'].data, ChartJsbar(AggSumBy(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311198016'))), ["rating", "change"], $("#select_1843311118896").val(), "name"), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", commons: {"opacity": 0.6}, type: "bar", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbar_1843311195856_obj'].update()})
+</script>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.58.4/plotly.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" type="text/css">
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssinput {border: 1px solid #f4f9fc ;text-align: center ;cursor: text ;margin: 0 ;color: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;}
+.cssinput:hover {color: #546e7a ;border: 1px solid #78909c ;}
+.cssinput:focus {outline: 0 ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+.cssbuttonbasic {font-weight: bold ;padding: 2px 20px ;margin: 2px 0 2px 0 ;text-decoration: none ;border-radius: 4px ;white-space: nowrap ;display: inline-block ;line-height: 30px ;-webkit-appearance: none ;-moz-appearance: none ;border: 1px solid #f4f9fc ;color: inherit ;background-color: #FFFFFF ;}
+.cssbuttonbasic:hover {text-decoration: none ;cursor: pointer ;background-color: #f4f9fc !IMPORTANT ;color: #607d8b !IMPORTANT ;border: 1px solid #607d8b !IMPORTANT ;}
+.cssbuttonbasic:focus {outline: 0 ;}
+.cssbuttonbasic:disabled {cursor: none ;background-color: #263238 ;color: #455a64 ;font-style: italic ;}
+
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#FFFFFF;color:#000000"><input placeholder="" type="text" value="Test" spellcheck="False" readonly="readonly" id="input_1843337001424" style="font-size:14px;font-family:Calibri;box-sizing:border-box;padding:0px;background-color:#f4f9fc;min-width:140px;margin-bottom:2px" class="cssinput" />
+<div id="fieldinput_1843337001232" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;margin-top:2px;display:None" class="cssdivnoborder"></div>
+<div id="line_1843337025472" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;height:330px" class="cssdivnoborder"></div>
+<button data-count="0" id="button_1843337027248" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">reset</button>
+<button data-count="0" id="button_1843337053472" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">reset</button>
+<button data-count="0" id="button_1843337054288" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">Add Trace</button></body>
+<script>
+function PlotlyPlotly(data, options){
+      if(data.python){
+        result = [];
+        data.datasets.forEach(function(values, i){
+          dataSet = {x: [], y: [], name: data.series[i], type: options.type, mode: options.mode, marker: {}};
+          if(typeof options.attrs !== undefined){ for(var attr in options.attrs){dataSet[attr] = options.attrs[attr]} };
+          if(typeof options.marker !== undefined){
+            for(var attr in options.marker){dataSet.marker[attr] = options.marker[attr]} };
+          result.push(Object.assign(dataSet, values))
+        }); 
+      } else {
+        var temp = {}; var labels = []; var uniqLabels = {}; var result = [] ;
+        options.y_columns.forEach(function(series){temp[series] = {}});
+        data.forEach(function(rec){ 
+          options.y_columns.forEach(function(name){
+            if(rec[name] !== undefined){
+              if(!(rec[options.x_column] in uniqLabels)){
+                labels.push(rec[options.x_column]); uniqLabels[rec[options.x_column]] = true};
+              temp[name][rec[options.x_column]] = rec[name]}})});
+        options.y_columns.forEach(function(series){
+          dataSet = {x: [], y: [], name: series, type: options.type, mode: options.mode, marker: {}};
+          if(typeof options.attrs !== undefined){ 
+            for(var attr in options.attrs){dataSet[attr] = options.attrs[attr]} };
+          if(typeof options.marker !== undefined){
+            for(var attr in options.marker){dataSet.marker[attr] = options.marker[attr]} };
+          labels.forEach(function(x, i){
+            dataSet.x.push(x);
+            if(temp[series][x] == undefined){dataSet.y.push(null)} else{dataSet.y.push(temp[series][x])}
+          }); result.push(dataSet)})
+      }; return result};document.getElementById('fieldinput_1843337001232').appendChild(document.getElementById('input_1843337001424'));line_1843337025472_obj = Plotly.newPlot(document.getElementById('line_1843337025472'), [{x: [0, 1, 2, 3, 4], y: [10.0, 35.0, 25.0, 30.0, 28.0], mode: "lines+markers", line: {color: "#009999"}, marker: {color: "#009999"}}], {height: 330}, {y_columns: ["y"], x_column: "x", type: "line", mode: "lines+markers", responsive: true});document.getElementById('line_1843337025472').on('plotly_click', function(data) {});document.getElementById('button_1843337027248').addEventListener('click', function(event){Plotly.react(document.getElementById('line_1843337025472'), PlotlyPlotly([{"label": "mango", "x": 0, "y": 30, "y1": 0}, {"label": "grape", "x": 1, "y": 28, "y1": 0}], {opacity: 0.5, y_columns: ["y"], x_column: "x", type: "line", mode: "lines+markers", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]}), {height: 330}, {opacity: 0.5, y_columns: ["y"], x_column: "x", type: "line", mode: "lines+markers", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})});document.getElementById('button_1843337053472').addEventListener('click', function(event){Plotly.react(document.getElementById('line_1843337025472'), PlotlyPlotly([{"label": "mango", "x": 0, "y": 20, "y1": 20, "r": 10}, {"label": "grape", "x": 1, "y": 18, "y2": 20, "r": 5}], {opacity: 0.5, y_columns: ["y"], x_column: "x", type: "line", mode: "lines+markers", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]}), {height: 330}, {opacity: 0.5, y_columns: ["y"], x_column: "x", type: "line", mode: "lines+markers", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})});document.getElementById('button_1843337054288').addEventListener('click', function(event){Plotly.addTraces(document.getElementById('line_1843337025472'), [{"y": [2, 1, 2]}])})
+</script>
+</html>

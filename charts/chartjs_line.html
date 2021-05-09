@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.1/js/fontawesome.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" type="text/css">
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssinput {border: 1px solid #f4f9fc ;text-align: center ;cursor: text ;margin: 0 ;color: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;}
+.cssinput:hover {color: #546e7a ;border: 1px solid #78909c ;}
+.cssinput:focus {outline: 0 ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+.cssselectstyle {padding-top: 0 ;background: inherit ;font-family: Calibri ;line-height: 23px ;font-size: 14px ;display: inline-block !IMPORTANT ;margin: 0 !IMPORTANT ;}
+.cssselectstyle:focus {outline: 0 ;border: none ;box-shadow: none ;}
+.cssselectbutton .btn {padding: 0 ;outline: none ;border-color: none ;box-shadow: none ;background-color: inherit ;border: none ;}
+.cssselectbutton .btn:focus {outline: none ;border-color: none ;box-shadow: none ;}
+.bootstrap-select .dropdown-toggle:focus {outline: 0 !important ;}
+.dropdown-item {padding: 1px 15px 1px 5px ;border-radius: 5px ;margin-top: -2px !IMPORTANT ;z-index: 210 !IMPORTANT ;line-height: 23px !IMPORTANT ;color: inherit !IMPORTANT ;}
+.dropdown-item:hover {color: #f4f9fc !IMPORTANT ;background-color: #455a64 !IMPORTANT ;}
+.dropdown-item:focus {outline: 0 ;}
+.dropdown-item:active {background-color: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.dropdown-menu {font-size: 14px !IMPORTANT ;background-color: #FFFFFF !IMPORTANT ;}
+.cssselecttoggle {background-color: inherit !IMPORTANT ;font-size: 14px !IMPORTANT ;}
+.bs-searchbox input.form-control {outline: 0 ;margin-bottom: 5px ;border-color: #607d8b ;height: 23px ;}
+.bs-searchbox input.form-control:focus {outline: 0 ;box-shadow: 0 0 0 0.2em #f4f9fc ;}
+.selected {background: #263238 !IMPORTANT ;color: #FFFFFF !IMPORTANT ;}
+.cssbuttonbasic {font-weight: bold ;padding: 2px 20px ;margin: 2px 0 2px 0 ;text-decoration: none ;border-radius: 4px ;white-space: nowrap ;display: inline-block ;line-height: 30px ;-webkit-appearance: none ;-moz-appearance: none ;border: 1px solid #f4f9fc ;color: inherit ;background-color: #FFFFFF ;}
+.cssbuttonbasic:hover {text-decoration: none ;cursor: pointer ;background-color: #f4f9fc !IMPORTANT ;color: #607d8b !IMPORTANT ;border: 1px solid #607d8b !IMPORTANT ;}
+.cssbuttonbasic:focus {outline: 0 ;}
+.cssbuttonbasic:disabled {cursor: none ;background-color: #263238 ;color: #455a64 ;font-style: italic ;}
+.cssdrawer div[name="drawer"] {position: absolute ;top: 0 ;height: 100% ;overflow-x: hidden ;}
+.cssdrawerhandle div[name="drawer_handle"] {width: 10px ;height: 100% ;display: inline-block ;background-color: #263238 ;}
+.cssdrawerhandle div[name="drawer_handle"]::after {position: absolute ;top: 50% ;padding: 2px ;height: 100% ;}
+.cssdrawercontent div[name="drawer_content"] {height: 100% ;display: inline-block ;background-color: #f4f9fc ;}
+
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#FFFFFF;color:#000000"><input placeholder="" type="text" value="Test" spellcheck="False" readonly="readonly" id="input_1843311684768" style="font-size:14px;font-family:Calibri;box-sizing:border-box;padding:0px;background-color:#f4f9fc;min-width:140px;margin-bottom:2px" class="cssinput" />
+<div id="fieldinput_1843311684576" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;margin-top:2px;display:None" class="cssdivnoborder"></div>
+<input placeholder="" type="text" value="" spellcheck="False" id="input_1843311708768" style="font-size:14px;font-family:Calibri;box-sizing:border-box;width:100%;padding:0px;background-color:#f4f9fc;margin-bottom:2px" class="cssinput" />
+<select id="select_1843311709440" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%" data-style="cssdivnoborder cssselectstyle cssselectbutton bootstrap-select .dropdown-toggle dropdown-item dropdown-menu cssselecttoggle"><option value="code" id="option_1843312069360" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">code</option><option value="script" id="option_1843312070272" style="font-size:inherit;font-family:inherit;box-sizing:border-box" class="cssdivnoborder">script</option></select>
+<div id="filters_1843311774208" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;min-height:60px" class="cssdivnoborder"><input placeholder="" type="text" value="" spellcheck="False" id="input_1843311774784" style="font-size:14px;font-family:Calibri;box-sizing:border-box;width:100%;padding:0 5px;background-color:#f4f9fc;margin-bottom:2px;text-align:left;display:None" class="cssinput" /><div name="panel" id="div_1843311809152" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;min-height:30px;padding:5px 2px" class="cssdivnoborder"></div></div>
+<ul id="items_1843311812128" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;list-style:none" class="cssdivnoborder"></ul>
+<button data-count="0" id="button_1843311874112" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">Test</button>
+
+      <div id="drawer_1843311875744" style="vertical-align:middle;box-sizing:border-box;width:100%;height:100%;position:relative;min-height:200px" class="cssdivnoborder cssdrawer cssdrawerhandle cssdrawercontent cssdrawer">
+        <div name="drawer_panels" id="div_1843311905232" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;padding-right:10px" class="cssdivnoborder"><div id="div_1843311985328" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;display:block" class="cssdivnoborder"><canvas id="chartbubble_1843311773248" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;height:330px;margin-top:10px;vertical-align:None" class="cssdivnoborder"></canvas></div></div>
+        <div name='drawer' style='clear:both;right:0;overflow-y:hidden'>
+          
+          <div name="drawer_handle" id="div_1843311906768" style="cursor:pointer;float:left" class="cssdivnoborder"></div><div name="drawer_content" id="div_1843311928464" style="overflow-y:auto;width:200px;margin-right:-200px" class="cssdivnoborder"><div id="div_1843311929424" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;padding:0 5px" class="cssdivnoborder"><div id="htmlgeneric_1843311962960" style="font-size:20px;font-family:inherit;box-sizing:border-box;height:auto;text-align:left;margin-top:5px;color:#263238;font-style:italic;vertical-align:None" class="cssdivnoborder">Columns</div><button data-count="0" id="button_1843311929136" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px;vertical-align:None" class="cssbuttonbasic">Select</button><button data-count="0" id="button_1843311931008" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px;vertical-align:None" class="cssbuttonbasic">UnSelect</button><ul id="items_1843311846592" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;list-style:none;vertical-align:None" class="cssdivnoborder"></ul></div></div>
+        </div>
+      </div>
+<button data-count="0" id="button_1843311987872" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">reset</button>
+<button data-count="0" id="button_1843312026528" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">add</button>
+<button data-count="0" id="button_1843312028112" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">reset</button></body>
+<script>
+function filterContain(r, k, v){if (v.length == 0){if(false){return r} else {return []}}; var n=[];r.forEach(function(e){if(v.includes(e[k])){n.push(e)}});return n};function ChartJsbubble(data, options){
+      if(data.python){
+        result = {datasets: [], labels: data.series};
+        data.datasets.forEach(function(dataset, i){
+          if(typeof dataset.backgroundColor === "undefined"){dataset.backgroundColor = options.background_colors[i]};
+          if(typeof dataset.borderColor === "undefined"){dataset.borderColor = options.colors[i]};
+          if(typeof options.commons !== "undefined"){Object.assign(dataset, options.commons)}
+          result.datasets.push(dataset) })
+      } else {
+        var temp = {}; var labels = [];
+        options.y_columns.forEach(function(series){temp[series] = []});
+        data.forEach(function(rec){ 
+          options.y_columns.forEach(function(name){
+            if(rec[options.x_axis] !== undefined){
+              labels.push(rec[options.x_axis]); var r = 2; 
+              if((options.rDim != undefined) && (rec[options.rDim] != undefined)){r = rec[options.rDim]};
+              temp[name].push({y: rec[name], x: rec[options.x_axis], r: r})}})});
+        result = {datasets: [], labels: labels};
+        options.y_columns.forEach(function(series, i){
+          dataSet = {label: series, type: options.type, data: [], backgroundColor: options.colors[i]};
+          if(typeof options.commons !== 'undefined'){
+            for(var attr in options.commons){dataSet[attr] = options.commons[attr]};}
+          labels.forEach(function(x, i){dataSet.data = temp[series]}); 
+        result.datasets.push(dataSet)})
+      }; return result};function filterEqual(r, k, v){if (v == ''){return r}; var n=[];r.forEach(function(e){if(e[k]==v){n.push(e)}});return n};
+       function filterMatch(r, v){if(typeof r === 'undefined'){ return []}; if(v.length == 0){return r}; var n=[];r.forEach(function(e){var isValid = true;
+           for(var a in v){if(!v[a].includes(e[a])){isValid = false; break}}; if(isValid){n.push(e)}}); return n};function Filters(htmlObj, data, options){
+      var panel = htmlObj.querySelector('[name=panel]'); panel.innerHTML = '';
+      if (typeof data !== 'undefined'){
+      data.forEach(function(val){
+        if(typeof val === 'string'){
+          val = {name: options.category, category: options.category, value: val, disabled: false, fixed: false} }
+        else{
+          if(val.category === undefined){ 
+            if(val.name === undefined) {val.category = options.category} else {val.category = val.name}}
+          if(val.name === undefined){ val.name = val.category}};
+        chipAdd(panel, val, options)})}
+        };function chipAdd(panel, record, options){
+        if(typeof(record.category !== "undefined")){options.category = record.category}
+        var div = document.createElement("div"); 
+        for (var key in options.item_css){div.style[key] = options.item_css[key]};
+        div.setAttribute('data-category', record.category);
+        var content = document.createElement("span"); 
+        for (var key in options.value_css){ content.style[key] = options.value_css[key]};
+        content.setAttribute('name', 'chip_value'); content.innerHTML = record.value; 
+        if(options.visible){
+          var p = document.createElement("p"); 
+          for (var key in options.category_css){p.style[key] = options.category_css[key]};
+          p.innerHTML = record.name; div.appendChild(p)}
+        div.appendChild(content);
+        if(!record.fixed && options.delete){
+          var icon = document.createElement("i"); 
+          for (var key in options.icon_css){icon.style[key] = options.icon_css[key] };
+          icon.classList.add('fas'); icon.classList.add('fa-times'); 
+          icon.addEventListener('click', function(){eval(options.delete)});
+          div.appendChild(icon)}
+        if(typeof options.draggable !== 'undefined'){
+          div.setAttribute('draggable', true);
+          div.style.cursor = 'grab';
+          div.ondragstart = function(event){ var value = this.innerHTML; options.draggable(event, value) }
+        }
+        panel.appendChild(div);
+        
+        const maxHeight = options.max_height;
+        if(maxHeight > 0){
+          panel.style.maxHeight = ""+ maxHeight + "px";
+          panel.style.overflow = "hidden"; panel.style.position = "relative";
+          var div = document.createElement("div"); div.style.color = "#3366BB";
+          div.innerHTML = "Show all"; div.style.position = "absolute"; 
+          div.style.bottom = 0; div.style.cursor = "pointer";
+          div.addEventListener("click", function(event){ 
+            var targetElement = event.target || event.srcElement;
+            if (targetElement.innerHTML != "reduce"){panel.style.maxHeight = null; targetElement.innerHTML = "reduce"} 
+            else {panel.style.maxHeight = ""+ maxHeight + "px"; targetElement.innerHTML = "Show all"}});
+          div.style.right = "5px"; panel.appendChild(div)
+        }
+    };function check(htmlObj, data, options){
+    var item = document.createElement("DIV");  
+    item.style.padding = 0; item.style.whiteSpace = "nowrap";  item.style.display = "block";
+    
+    var span = document.createElement("span");  
+    var input = document.createElement("input");    
+    input.setAttribute('type', 'checkbox');
+    input.setAttribute('name', 'input_box');
+    input.style.verticalAlign = "middle";
+    input.onchange = function(event){ 
+      event.stopPropagation(); event.cancelBubble = true; span.setAttribute('data-valid', this.checked); 
+      var value = span.innerHTML; if(options.click != null){options.click(event, value)}};
+    
+    var span = document.createElement("span"); span.style.marginLeft = '5px'; 
+    span.setAttribute('name', 'value'); span.setAttribute('data-valid', false); 
+    
+    if(typeof data === 'object'){ 
+      if(typeof data.text !== 'undefined'){ span.innerHTML = data.text} else {span.innerHTML = data.value}} 
+    else { span.innerHTML = data};
+    if(options.checked){ 
+      input.setAttribute('checked', options.checked); span.setAttribute('data-valid', options.checked)};
+    if(data.checked){input.setAttribute('checked', data.checked); span.setAttribute('data-valid', data.checked)};
+    
+    span.style.verticalAlign = "middle";
+    item.appendChild(input); item.appendChild(span);
+    ; htmlObj.appendChild(item)
+      };function Items(htmlObj, data, options){ htmlObj.innerHTML = "";
+      data.forEach(function(item, i){
+        if(options.showdown){var converter = new showdown.Converter(options.showdown); 
+          converter.setOption("display", "inline-block"); var content = item; 
+          if(typeof item.content !== 'undefined'){content = item.content}
+          else if(typeof item.text !== 'undefined'){content = item.text};
+          var content = converter.makeHtml(content).replace("<p>", "<p style='display:inline-block;margin:0'>")};
+        var li = document.createElement("li");
+        Object.keys(options.li_style).forEach(function(key){li.style[key] = options.li_style[key]});
+        if(typeof item.type === 'undefined'){window[options.prefix+ options.items_type](li, item, options)}
+        else{window[options.prefix + item.type](li, item, options)};
+        if(typeof item.tooltip !== 'undefined'){
+          var info = document.createElement("i");
+          info.classList.add(...options.info_icon.split(" ")); info.style.position = 'absolute';
+          info.style.top = "5px"; info.style.right = "20px";
+          li.style.position = "relative";
+          
+          info.setAttribute('title', item.tooltip); 
+          info.setAttribute('data-html', true); 
+          info.setAttribute('data-placement', 'right'); 
+          info.setAttribute('data-toggle', 'tooltip'); 
+          li.lastChild.style.display = 'inline-block'; li.appendChild(info);
+          $(info).tooltip();
+          
+        }
+        if(options.delete){
+          var close = document.createElement("i");
+          close.classList.add(...options.delete_icon.split(" ")); close.style.position = 'absolute';
+          close.style.right = "0"; close.style.cursor = 'pointer';
+          close.onclick = function(event){this.parentNode.remove()};
+          li.style.position = "relative";
+          for (const [key, value] of Object.entries(options.delete_position)){
+            close.style[key] = value}
+          li.lastChild.style.display = 'inline-block'; li.appendChild(close)}
+        if(options.items_space){li.style.margin = "5px 0"; li.style.padding = "2px 0"}
+        htmlObj.appendChild(li)})};var None = [{"name": "C", "type": "code", "rating": 17.07, "change": 12.82}, {"name": "Java", "type": "code", "rating": 16.28, "change": 0.28}, {"name": "Python", "type": "script", "rating": 9.12, "change": 1.29}, {"name": "C++", "type": "code", "rating": 6.13, "change": -1.97}, {"name": "C#", "type": "code", "rating": 4.29, "change": 0.3}, {"name": "Visual Basic", "type": "script", "rating": 4.18, "change": -1.01}, {"name": "JavaScript", "type": "script", "rating": 2.68, "change": -0.01}, {"name": "PHP", "type": "script", "rating": 2.49, "change": 0}, {"name": "SQL", "type": "script", "rating": 2.09, "change": -0.47}, {"name": "R", "type": "script", "rating": 1.85, "change": 0.9}];document.getElementById('fieldinput_1843311684576').appendChild(document.getElementById('input_1843311684768'));$("#select_1843311709440").selectpicker({"auto_select": 0}).selectpicker('refresh');Filters(document.getElementById('filters_1843311774208'), [], {delete: "this.parentNode.remove()", max_height: 0, item_css: {"border": "1px solid #e8f2ef", "border-radius": "5px", "margin-left": "5px", "width": "auto", "display": "inline-block", "background": "inherit", "white-space": "nowrap"}, category: "group", visible: false, value_css: {"font-size": "14px", "font-weight": "bold", "vertical-align": "bottom"}, category_css: {"display": "inline", "margin-right": "2px", "vertical-align": "top", "font-size": "11px"}, icon_css: {"color": "#5DDEAD", "margin-left": "5px", "cursor": "pointer"}, builder: Filters});Items(document.getElementById('items_1843311812128'), [{"label": "python", "value": false}, {"label": "Java", "value": 5}], {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: null, draggable: false, prefix: "", checked: false, items_type: "check", items_space: false, style_select: "list_check_selected", builder: Items});Items(document.getElementById('items_1843311846592'), [{"value": "C", "checked": false}, {"value": "Java", "checked": false}, {"value": "Python", "checked": false}, {"value": "C++", "checked": false}, {"value": "C#", "checked": false}, {"value": "Visual Basic", "checked": false}, {"value": "JavaScript", "checked": false}, {"value": "PHP", "checked": false}, {"value": "SQL", "checked": false}, {"value": "R", "checked": false}], {delete_icon: "fas fa-trash-alt", delete_position: {"float": "right", "marginRight": "10px", "marginTop": "5px"}, info_icon: "fas fa-info-circle", li_style: {}, click: function(event, value){console.log(value);Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()} , draggable: false, prefix: "", checked: true, items_type: "check", items_space: false, style_select: "list_check_selected", builder: Items});chartbubble_1843311773248_obj = new Chart(document.getElementById('chartbubble_1843311773248').getContext("2d"), {type: "bubble", data: {labels: ["C", "Java", "Python", "C++", "C#", "Visual Basic", "JavaScript", "PHP", "SQL", "R"], datasets: [{data: {"data": [{"x": "C", "y": 17.07, "r": 2}, {"x": "Java", "y": 16.28, "r": 2}, {"x": "Python", "y": 9.12, "r": 2}, {"x": "C++", "y": 6.13, "r": 2}, {"x": "C#", "y": 4.29, "r": 2}, {"x": "Visual Basic", "y": 4.18, "r": 2}, {"x": "JavaScript", "y": 2.68, "r": 2}, {"x": "PHP", "y": 2.49, "r": 2}, {"x": "SQL", "y": 2.09, "r": 2}, {"x": "R", "y": 1.85, "r": 2}], "label": "rating"}, label: "New Test label", backgroundColor: "rgba(0, 153, 153, 0.5)", borderWidth: 1, borderColor: "#009999"}, {data: {"data": [{"x": "C", "y": 12.82, "r": 2}, {"x": "Java", "y": 0.28, "r": 2}, {"x": "Python", "y": 1.29, "r": 2}, {"x": "C++", "y": -1.97, "r": 2}, {"x": "C#", "y": 0.3, "r": 2}, {"x": "Visual Basic", "y": -1.01, "r": 2}, {"x": "JavaScript", "y": -0.01, "r": 2}, {"x": "PHP", "y": 0.0, "r": 2}, {"x": "SQL", "y": -0.47, "r": 2}, {"x": "R", "y": 0.9, "r": 2}], "label": "change"}, label: "change", backgroundColor: "rgba(51, 102, 153, 0.5)", borderWidth: 1, borderColor: "#336699"}]}, options: {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]}});document.getElementById('input_1843311708768').addEventListener('keydown', function(event){if(event.which == 13){if (( 
+      (function(dom){var index = -1; var children = dom.childNodes; var count = 0; 
+        for(child in children){if((typeof children[child] === 'object') && (children[child].querySelector('span[name=chip_value]') != null) && children[child].querySelector('span[name=chip_value]').textContent == document.getElementById('input_1843311708768').value){
+            if(children[child].getAttribute('data-category') == "name"){ index = count; break; }
+        }; count++; }; return index})(document.getElementById('filters_1843311774208').querySelector('div[name=panel]')) == -1) && (document.getElementById('input_1843311708768').value != '')){ 
+        chipAdd(document.getElementById('filters_1843311774208').querySelector('div[name=panel]'), {name: "name", category: "name", value: document.getElementById('input_1843311708768').value, disabled: false, fixed: false}, {delete: "this.parentNode.remove()",max_height: 0,'item_css': {'border': "1px solid #e8f2ef", 'border-radius': "5px", 'margin-left': "5px", 'width': "auto", 'display': "inline-block", 'background': "inherit", 'white-space': "nowrap"},category: "group",visible: false,'value_css': {'font-size': "14px", 'font-weight': "bold", 'vertical-align': "bottom"},'category_css': {'display': "inline", 'margin-right': "2px", 'vertical-align': "top", 'font-size': "11px"},'icon_css': {'color': "#5DDEAD", 'margin-left': "5px", 'cursor': "pointer"}})  }
+      ;Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterMatch(None, 
+      (function(dom){var content = {}; 
+        dom.childNodes.forEach(function(rec){
+          var label = rec.getAttribute('data-category');
+          if(!(label in content) && (label != null)){ content[label] = [] }; 
+          var listItem = rec.querySelector('span[name=chip_value]');
+          if (listItem != null && (label != null)){content[label].push(listItem.textContent)}}); 
+        return content})(document.getElementById('filters_1843311774208').querySelector('div[name=panel]'))
+      ), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update();document.getElementById('input_1843311708768').select()}});document.getElementById('select_1843311709440').addEventListener('change', function(event){Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterEqual(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), "name", document.getElementById('input_1843311708768').value), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update();Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterEqual(filterEqual(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), "name", document.getElementById('input_1843311708768').value), "type", $("#select_1843311709440").val()), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()});document.getElementById('chartbubble_1843311773248').addEventListener('click', function(event){var activePoints = chartbubble_1843311773248_obj.getElementsAtEvent(event);if(activePoints.length > 0){ console.log(window['chartbubble_1843311773248_obj'].data.datasets[0].data[activePoints[0]['_index']]) }});document.getElementById('button_1843311874112').addEventListener('click', function(event){console.log(
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311812128')));console.log(
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592')))});document.getElementById('div_1843311906768').addEventListener('click', function(event){if(document.getElementById('div_1843311928464').style.marginRight != '0px') {document.getElementById('div_1843311928464').style.transitionProperty = "margin-right"; document.getElementById('div_1843311928464').style.transitionDuration = "1s"; document.getElementById('div_1843311928464').style.transitionTimingFunction = "ease"; document.getElementById('div_1843311928464').style.marginRight = "0px"; document.getElementById('div_1843311928464').style.transitionProperty = "initial"} else {document.getElementById('div_1843311928464').style.transitionProperty = "margin-right"; document.getElementById('div_1843311928464').style.transitionDuration = "1s"; document.getElementById('div_1843311928464').style.transitionTimingFunction = "ease"; document.getElementById('div_1843311928464').style.marginRight = "-200px"; document.getElementById('div_1843311928464').style.transitionProperty = "initial"}});document.getElementById('button_1843311929136').addEventListener('click', function(event){
+        document.getElementById('items_1843311846592').childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            item.checked = true;
+            dom.querySelector('[name=value]').setAttribute("data-valid", true);
+        }});Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()});document.getElementById('button_1843311931008').addEventListener('click', function(event){
+        document.getElementById('items_1843311846592').childNodes.forEach(function(dom, k){  
+          const item = dom.querySelector('[name=input_box]');
+          if (item != null){ 
+            dom.querySelector('[name=input_box]').checked = false;
+            dom.querySelector('[name=value]').setAttribute("data-valid", false);
+        }});Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()});document.getElementById('button_1843311987872').addEventListener('click', function(event){Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble(filterEqual(filterEqual(filterEqual(filterContain(None, "name", 
+      (function(dom){var values = []; dom.childNodes.forEach( function(dom, k){  
+          const item = dom.querySelector('[name=value]');
+          if (item != null){
+            const valid = item.getAttribute("data-valid");
+            if (valid === 'true'){values.push(dom.querySelector('[name=value]').innerHTML)}
+          }
+      }); return values})(document.getElementById('items_1843311846592'))), "name", document.getElementById('input_1843311708768').value), "type", $("#select_1843311709440").val()), "label", document.getElementById('input_1843311708768').value), {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()});document.getElementById('button_1843312026528').addEventListener('click', function(event){
+        var index = window['chartbubble_1843311773248_obj'].data.labels.indexOf(0);
+        if(index >= 0){
+          window['chartbubble_1843311773248_obj'].data.datasets.forEach(function(dataset){
+            if (["Test"].includes(dataset.label)){
+              dataset.data[index] = null}})} ;
+      var values = []; var index= -1; var chartbubble_1843311773248_options = {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]};
+      window['chartbubble_1843311773248_obj'].data.datasets.forEach(function(d, i){if(d.label == "Test2"){index = i}});
+      if (index == -1){
+        window['chartbubble_1843311773248_obj'].data.labels.forEach(function(v){values.push([{"x": 0, "y": 23}, {"x": 1, "y": 23}])});
+        if(!''){
+          var nextIndex = window['chartbubble_1843311773248_obj'].data.datasets.length;
+          chartbubble_1843311773248_options.commons.backgroundColor = chartbubble_1843311773248_options.background_colors[nextIndex];
+          chartbubble_1843311773248_options.commons.borderColor = chartbubble_1843311773248_options.colors[nextIndex];
+          chartbubble_1843311773248_options.commons.hoverBackgroundColor = chartbubble_1843311773248_options.background_colors[nextIndex]};
+        if (chartbubble_1843311773248_options.commons.type == "line"){chartbubble_1843311773248_options.commons.fill = null};
+        window['chartbubble_1843311773248_obj'].data.datasets.push(Object.assign({label: "Test2", data: [{"x": 0, "y": 23}, {"x": 1, "y": 23}]}, chartbubble_1843311773248_options.commons))
+      };window['chartbubble_1843311773248_obj'].data.labels = []; window['chartbubble_1843311773248_obj'].data.datasets = [];window['chartbubble_1843311773248_obj'].update()});document.getElementById('button_1843312028112').addEventListener('click', function(event){Object.assign(window['chartbubble_1843311773248_obj'].data, ChartJsbubble([{"label": "mango", "x": 0, "y": 20, "y1": 20, "r": 10}, {"label": "grape", "x": 1, "y": 18, "y2": 20, "r": 5}], {opacity: 0.5, y_columns: ["rating", "change"], x_axis: "name", z_columns: null, rDim: null, commons: {"opacity": 0.6}, type: "bubble", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})); 
+        window['chartbubble_1843311773248_obj'].update()})
+</script>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#FFFFFF;color:#000000"><div id="script_1843313513808" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:300px;height:330px" class="cssdivnoborder"></div>
+<div id="script_1843313514000" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:300px;height:330px" class="cssdivnoborder"></div></body>
+<script>
+function D3Builder11983920786599635662(htmlObj, data, options){
+    var layout = d3.layout.cloud().size([options.wdith, options.height])
+        .words(data.map(function(d) { return {text: d, size: 10 + Math.random() * 90}; }))
+        .padding(5).rotate(function() { return ~~(Math.random() * 2) * 90; })
+        .font("Impact").fontSize(function(d) { return d.size; }).on("end", draw);
+    layout.start();
+
+    function draw(words) {
+      htmlObj.append("svg").attr("width", layout.size()[0]).attr("height", layout.size()[1])
+        .append("g").attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+        .selectAll("text").data(words)
+        .enter().append("text")
+          .style("font-size", function(d) { return d.size + "px"; })
+          .style("font-family", "Impact")
+          .attr("text-anchor", "middle")
+          .attr("transform", function(d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"})
+          .text(function(d) { return d.text; });
+    }};D3Builder11983920786599635662(d3.select('#script_1843313513808'), ["This", "sn", "example", "of", "text", "in", "the", "world", "cloud"], {wdith: 300, height: 330, builder: D3Builder11983920786599635662});D3Builder11983920786599635662(d3.select('#script_1843313514000'), ["This", "is", "a", "second", "example", ""], {wdith: 300, height: 330, builder: D3Builder11983920786599635662})
+</script>
+</html>

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<link href='https://raw.githubusercontent.com/epykure/epyk-templates/master/static/images/logo.ico' rel='icon' type='image/x-icon'>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="https://use.fontawesome.com/releases/v5.13.1/js/fontawesome.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" type="text/css">
+<style>
+::-webkit-scrollbar {width: 8px ;height: 8px ;}
+::-webkit-scrollbar-thumb {background-color: #b0bec5 ;}
+::-webkit-scrollbar-track {background-color: #f4f9fc ;}
+::selection {background-color: #cfd8dc ;}
+::-moz-selection {background-color: #cfd8dc ;}
+.cssdivnoborder {margin: 0 ;clear: both ;padding: 0 ;border: 0 ;}
+.cssdivnoborder:focus {outline: 1px solid #bdbdbd ;}
+.cssbuttonbasic {font-weight: bold ;padding: 2px 20px ;margin: 2px 0 2px 0 ;text-decoration: none ;border-radius: 4px ;white-space: nowrap ;display: inline-block ;line-height: 30px ;-webkit-appearance: none ;-moz-appearance: none ;border: 1px solid #f4f9fc ;color: inherit ;background-color: #FFFFFF ;}
+.cssbuttonbasic:hover {text-decoration: none ;cursor: pointer ;background-color: #f4f9fc !IMPORTANT ;color: #607d8b !IMPORTANT ;border: 1px solid #607d8b !IMPORTANT ;}
+.cssbuttonbasic:focus {outline: 0 ;}
+.cssbuttonbasic:disabled {cursor: none ;background-color: #263238 ;color: #455a64 ;font-style: italic ;}
+
+</style>
+</head>
+<body style="font-size:14px;font-family:Calibri;margin:0px;background:#eeeeee;color:#000000;padding-bottom:5px;padding-left:5%;padding-right:5%;margin-top:40px"><div id="div_1843317519840" class="cssdivnoborder"></div><div id="div_1843317520800" style="max-width:650px;min-height:150px;padding:20px 10px;box-shadow:0 0 10px rgba(0, 0, 0, 0.5);border-radius:0px;background:white;margin:20px auto" class="cssdivnoborder"><div id="div_1843317568800" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;min-height:23px;background-color:#607d8b;color:white;position:fixed;top:0px;left:0px;z-index:500;padding:5px 15px" class="cssdivnoborder"><div id="div_1843317568224" style="vertical-align:None;box-sizing:border-box;width:100%;text-align:left" class="cssdivnoborder"><i aria-hidden="true" id="icon_1843317520416" style="font-size:14px;vertical-align:None;display:inline-block;margin:auto 0;padding:auto 0;color:inherit" class="fab fa-github"></i><a href="https://github.com/epykure/epyk-templates/tree/master/locals/charts/nvd3_pie.py" id="externallink_1843317536464" style="font-size:inherit;font-family:inherit;box-sizing:border-box;color:white;margin-left:10px;vertical-align:None" class="cssdivnoborder">Source code available here</a></div></div>
+<svg id="chartpie_1843317571152" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:100%;height:330px" class="cssdivnoborder"></svg>
+<button data-count="0" id="button_1843317593328" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">Load</button>
+<button data-count="0" id="button_1843317594096" style="font-size:14px;margin:0;padding:0px;padding-left:5px;padding-right:5px;line-height:23px" class="cssbuttonbasic">reset</button>
+<div id="div_1843317625136" style="vertical-align:middle;box-sizing:border-box;width:100%;text-align:left;font-size:10px;margin-bottom:5px;margin-top:5px" class="cssdivnoborder"><div id="div_1843317866656" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_1843317626720" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#5E20B4;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Bootstrap</div><div id="text_1843317627584" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v4.6.0</div></div><div id="div_1843317896432" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_1843317869584" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#759E81;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Font-awesome</div><div id="text_1843317870352" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v5.13.1</div></div><div id="div_1843317921872" style="vertical-align:middle;box-sizing:border-box;width:auto;text-align:left;display:inline-block;border:1px solid #9e9e9e;margin:2px;border-radius:0 10px 10px 0" class="cssdivnoborder"><div id="text_1843317869680" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;margin-right:5px;cursor:pointer;background:#02D40B;color:white;text-shadow:1px 1px black;padding:0 5px;border-right:1px solid black" class="cssdivnoborder">Nvd3</div><div id="text_1843317920432" style="font-size:inherit;font-family:inherit;box-sizing:border-box;width:auto;text-align:left;display:inline-block;vertical-align:None;padding:0 5px 0 0" class="cssdivnoborder">v1.8.6</div></div></div></div><div id="div_1843317520128" class="cssdivnoborder"></div></body>
+<script>
+function NVD3NVD3(data, options){
+      if(data.python){
+        data.datasets.forEach(function(dataset, i){
+          result = dataset;  
+        });
+      } else {
+        var temp = {}; var labels = {};
+        data.forEach(function(rec){ 
+          if(!(rec[options.x_axis] in temp)){temp[rec[options.x_axis]] = {}};
+          options.y_columns.forEach(function(name){
+            labels[name] = true; if(rec[name] !== undefined) {
+              if (!(name in temp[rec[options.x_axis]])){temp[rec[options.x_axis]][name] = rec[name]} 
+              else {temp[rec[options.x_axis]][name] += rec[name]}}  }) ;
+        });
+        var labels = Object.keys(labels); result = [];
+        for(var series in temp){
+          var values = {y: 0, x: series};
+          labels.forEach(function(label){
+            if(temp[series][label] !== undefined){values.y = temp[series][label]}});
+          result.push(values)}
+      }; return result};chartpie_1843317571152_obj = nv.models.pieChart().x(function(d){return d.x}).y(function(d){return d.y}).color(["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"]);chartpie_1843317571152_obj.xAxis;chartpie_1843317571152_obj.yAxis;d3.select('#chartpie_1843317571152').datum([{"x": "Series A", "y": 38.0}, {"x": "Series B", "y": 60.0}, {"x": "Series C", "y": 30.0}]).call(chartpie_1843317571152_obj);nv.utils.windowResize(function() { chartpie_1843317571152_obj.update() });document.getElementById('button_1843317593328').addEventListener('click', function(event){
+        d3.select('#chartpie_1843317571152').datum(NVD3NVD3({"labels": ["y"], "datasets": [[{"x": "Series A", "y": 30.0}, {"x": "Series B", "y": 28.0}]], "series": ["y"], "python": true}, {opacity: 0.5, y_columns: ["y"], x_column: "x", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})).transition().duration(500).call(chartpie_1843317571152_obj); 
+        nv.utils.windowResize(chartpie_1843317571152_obj.update)});document.getElementById('button_1843317594096').addEventListener('click', function(event){
+        d3.select('#chartpie_1843317571152').datum(NVD3NVD3({"labels": ["y"], "datasets": [[{"x": 0, "y": 20.0}, {"x": 1, "y": 18.0}]], "series": ["y"], "python": true}, {opacity: 0.5, y_columns: ["y"], x_column: "x", colors: ["#009999", "#336699", "#ffdcb9", "#cc99ff", "#b3d9ff", "#ffff99", "#000066", "#b2dfdb", "#80cbc4", "#e0f2f1", "#b2dfdb", "#80cbc4", "#ffebee", "#ffcdd2", "#ef9a9a", "#f3e5f5", "#e1bee7", "#ce93d8", "#ede7f6", "#d1c4e9", "#b39ddb", "#e8eaf6", "#c5cae9", "#9fa8da", "#fffde7", "#fff9c4", "#fff59d", "#fff3e0", "#ffe0b2", "#ffcc80", "#efebe9", "#d7ccc8", "#bcaaa4"], background_colors: ["rgba(0, 153, 153, 0.5", "rgba(51, 102, 153, 0.5", "rgba(255, 220, 185, 0.5", "rgba(204, 153, 255, 0.5", "rgba(179, 217, 255, 0.5", "rgba(255, 255, 153, 0.5", "rgba(0, 0, 102, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(224, 242, 241, 0.5", "rgba(178, 223, 219, 0.5", "rgba(128, 203, 196, 0.5", "rgba(255, 235, 238, 0.5", "rgba(255, 205, 210, 0.5", "rgba(239, 154, 154, 0.5", "rgba(243, 229, 245, 0.5", "rgba(225, 190, 231, 0.5", "rgba(206, 147, 216, 0.5", "rgba(237, 231, 246, 0.5", "rgba(209, 196, 233, 0.5", "rgba(179, 157, 219, 0.5", "rgba(232, 234, 246, 0.5", "rgba(197, 202, 233, 0.5", "rgba(159, 168, 218, 0.5", "rgba(255, 253, 231, 0.5", "rgba(255, 249, 196, 0.5", "rgba(255, 245, 157, 0.5", "rgba(255, 243, 224, 0.5", "rgba(255, 224, 178, 0.5", "rgba(255, 204, 128, 0.5", "rgba(239, 235, 233, 0.5", "rgba(215, 204, 200, 0.5", "rgba(188, 170, 164, 0.5"]})).transition().duration(500).call(chartpie_1843317571152_obj); 
+        nv.utils.windowResize(chartpie_1843317571152_obj.update)});document.getElementById('text_1843317626720').addEventListener('click', function(event){window.open("https://getbootstrap.com/", "_blank")});document.getElementById('text_1843317869584').addEventListener('click', function(event){window.open("https://fontawesome.com/", "_blank")});document.getElementById('text_1843317869680').addEventListener('click', function(event){window.open("http://nvd3.org/", "_blank")})
+</script>
+</html>
